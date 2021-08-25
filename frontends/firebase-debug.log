@@ -1,0 +1,39 @@
+[debug] [2021-08-15T03:10:39.130Z] ----------------------------------------------------------------------
+[debug] [2021-08-15T03:10:39.132Z] Command:       C:\Program Files (x86)\nodejs\node.exe c:\Users\nkoma\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-08-15T03:10:39.132Z] CLI Version:   9.16.5
+[debug] [2021-08-15T03:10:39.132Z] Platform:      win32
+[debug] [2021-08-15T03:10:39.133Z] Node Version:  v12.22.1
+[debug] [2021-08-15T03:10:39.134Z] Time:          Sun Aug 15 2021 12:10:39 GMT+0900 (GMT+09:00)
+[debug] [2021-08-15T03:10:39.134Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-15T03:10:39.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-15T03:10:39.226Z] > authorizing via signed-in user (fg.web@funguys.jp)
+[debug] [2021-08-15T03:10:39.226Z] [iam] checking project fung-portal for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-08-15T03:10:39.229Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fung-portal:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-08-15T03:10:40.784Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 15 Aug 2021 03:10:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=560","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-15T03:10:40.795Z] > refreshing access token with scopes: []
+[debug] [2021-08-15T03:10:40.796Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-15T03:10:41.283Z] <<< HTTP RESPONSE 200 {"date":"Sun, 15 Aug 2021 03:10:39 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-15T03:10:41.485Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fung-portal [none]
+[debug] [2021-08-15T03:10:43.061Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fung-portal 200
+[debug] [2021-08-15T03:10:43.062Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fung-portal {"projectId":"fung-portal","projectNumber":"94135716886","displayName":"fung-portal","name":"projects/fung-portal","resources":{"hostingSite":"fung-portal"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'fung-portal'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-08-15T03:10:43.085Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-15T03:10:43.086Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-15T03:10:45.908Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 15 Aug 2021 03:10:43 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-15T03:10:46.026Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/fung-portal/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-08-15T03:10:46.397Z] Error: self signed certificate
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1502:34)
+    at TLSSocket.emit (events.js:314:20)
+    at TLSSocket.EventEmitter.emit (domain.js:483:12)
+    at TLSSocket._finishInit (_tls_wrap.js:937:8)
+    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:711:12)
+[error] 
+[error] Error: Server Error. self signed certificate

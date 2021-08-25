@@ -1,3 +1,3 @@
 # ファンガイズ　社内報用
 
-##FOR 宇川
+## To pikaso kun
